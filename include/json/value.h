@@ -537,6 +537,7 @@ Json::Value obj_value(Json::objectValue); // {}
   size_t getOffsetLimit() const;
 
 private:
+  template <typename _T> Value(const _T *);
   void initBasic(ValueType type, bool allocated = false);
 
   Value& resolveReference(const char* key);
